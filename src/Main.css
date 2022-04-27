@@ -1,0 +1,20 @@
+
+.main--{
+    display: flex;
+}
+.main--content{
+    color: #1b1c1d;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.main--1{
+    display: flex;
+}
+.main--photos1{
+    margin-bottom: 20px;
+    margin-right: 20px;
+}

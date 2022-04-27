@@ -1,0 +1,22 @@
+.activities--main1{
+    color: #232527;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 900;
+}
+.activities--main2{
+    color: #222425;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+.activities--1{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.activities--text {
+    padding-left: 10px;
+     clear: both; 
+    display: inline-block; 
+}

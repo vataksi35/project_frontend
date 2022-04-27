@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Button from '@mui/material/Button';
+import { SnackbarProvider, useSnackbar } from 'notistack';
 
-function App() {
+
+function MyApp() {
+  const { enqueueSnackbar } = useSnackbar();
+
+  const handleClickVariant = (variant) => () => {
+    enqueueSnackbar('You have booked the room successfully!', { variant });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Button sx={{color:"white",fontFamily:"Kanit"}} onClick={handleClickVariant('success')}>Book</Button>
+    </React.Fragment>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <SnackbarProvider maxSnack={3}>
+      <MyApp />
+    </SnackbarProvider>
+  );
+}
